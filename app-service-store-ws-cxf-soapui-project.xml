@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8a0b665f-b4ae-4a9e-bdc9-5429c9f7ed19" activeEnvironment="Default" name="app-service-store-ws-cxf" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="16081529-0d02-4ce9-a445-0808d801a2e8" wsaVersion="NONE" name="WebStoreServiceSoapServiceSoapBinding" type="wsdl" bindingName="{http://webservice.store.web.com.br/}WebStoreServiceSoapServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap?wsdl"><con:part><con:url>http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebStoreServiceSoapService" targetNamespace="http://webservice.store.web.com.br/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.store.web.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://webservice.store.web.com.br/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="buscarJogo" type="tns:buscarJogo"/>
+      <xs:element name="buscarJogoResponse" type="tns:buscarJogoResponse"/>
+      <xs:element name="desabilitarProduto" type="tns:desabilitarProduto"/>
+      <xs:element name="desabilitarProdutoResponse" type="tns:desabilitarProdutoResponse"/>
+      <xs:element name="listarJogos" type="tns:listarJogos"/>
+      <xs:element name="listarJogosResponse" type="tns:listarJogosResponse"/>
+      <xs:complexType name="desabilitarProduto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="desabilitarProdutoResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="listarJogos">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="listarJogosResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:outGameDTO"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="outGameDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="classificacao" type="xs:string"/>
+          <xs:element minOccurs="0" name="fabricante" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:int"/>
+          <xs:element minOccurs="0" name="midia" type="xs:string"/>
+          <xs:element minOccurs="0" name="nome" type="xs:string"/>
+          <xs:element minOccurs="0" name="plataforma" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="buscarJogo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:inGameDTO"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="inGameDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:int"/>
+          <xs:element minOccurs="0" name="nome" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="buscarJogoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:optional"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="optional">
+        <xs:sequence/>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="desabilitarProduto">
+    <wsdl:part element="tns:desabilitarProduto" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="desabilitarProdutoResponse">
+    <wsdl:part element="tns:desabilitarProdutoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buscarJogo">
+    <wsdl:part element="tns:buscarJogo" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarJogosResponse">
+    <wsdl:part element="tns:listarJogosResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buscarJogoResponse">
+    <wsdl:part element="tns:buscarJogoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarJogos">
+    <wsdl:part element="tns:listarJogos" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WebStoreServiceSoap">
+    <wsdl:operation name="desabilitarProduto">
+      <wsdl:input message="tns:desabilitarProduto" name="desabilitarProduto"></wsdl:input>
+      <wsdl:output message="tns:desabilitarProdutoResponse" name="desabilitarProdutoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarJogos">
+      <wsdl:input message="tns:listarJogos" name="listarJogos"></wsdl:input>
+      <wsdl:output message="tns:listarJogosResponse" name="listarJogosResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarJogo">
+      <wsdl:input message="tns:buscarJogo" name="buscarJogo"></wsdl:input>
+      <wsdl:output message="tns:buscarJogoResponse" name="buscarJogoResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebStoreServiceSoapServiceSoapBinding" type="tns:WebStoreServiceSoap">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="desabilitarProduto">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="desabilitarProduto">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="desabilitarProdutoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarJogos">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarJogos">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarJogosResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarJogo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="buscarJogo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="buscarJogoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebStoreServiceSoapService">
+    <wsdl:port binding="tns:WebStoreServiceSoapServiceSoapBinding" name="WebStoreServiceSoapPort">
+      <soap:address location="http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint></con:endpoints><con:operation id="7a300d96-7f2c-4f7e-8388-58bf285f82a1" isOneWay="false" action="" name="buscarJogo" bindingOperationName="buscarJogo" type="Request-Response" outputName="buscarJogoResponse" inputName="buscarJogo" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f246c7ff-dceb-4149-bf4c-d31c8f80c016" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.store.web.com.br/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:buscarJogo>\r\r
+         <arg0>\r
+            <id>1000</id>\r\r
+            <nome></nome>\r
+         </arg0>\r
+      </web:buscarJogo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.store.web.com.br/WebStoreServiceSoap/buscarJogo"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="857b7a9a-98ba-400f-96f9-847fa4228e1d" isOneWay="false" action="" name="desabilitarProduto" bindingOperationName="desabilitarProduto" type="Request-Response" outputName="desabilitarProdutoResponse" inputName="desabilitarProduto" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cf5359a9-47eb-4d9f-8f88-c77e651d15d8" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.store.web.com.br/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:desabilitarProduto>\r
+         <!--Optional:-->\r
+         <arg0>1000</arg0>\r
+      </web:desabilitarProduto>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.store.web.com.br/WebStoreServiceSoap/desabilitarProduto"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="05cb93a8-d95b-4dba-a024-f2a760c8ccfa" isOneWay="false" action="" name="listarJogos" bindingOperationName="listarJogos" type="Request-Response" outputName="listarJogosResponse" inputName="listarJogos" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a2a8377-f06f-44de-882b-031f2cb1f379" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.store.web.com.br/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:listarJogos/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.store.web.com.br/WebStoreServiceSoap/listarJogos"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

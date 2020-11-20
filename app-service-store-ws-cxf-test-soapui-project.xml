@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="839c5527-2dfa-4b12-8ee6-30b5414888f1" activeEnvironment="Default" name="app-service-store-ws-cxf-test" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="aafffbf4-3a25-4f5b-8b85-cf7aa896b5d1" wsaVersion="NONE" name="WebStoreServiceSoapServiceSoapBinding" type="wsdl" bindingName="{http://webservice.store.web.com.br/}WebStoreServiceSoapServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap?wsdl"><con:part><con:url>http://127.0.0.1:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="WebStoreServiceSoapService" targetNamespace="http://webservice.store.web.com.br/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.store.web.com.br/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://webservice.store.web.com.br/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="buscarJogo" type="tns:buscarJogo"/>
+      <xs:element name="buscarJogoResponse" type="tns:buscarJogoResponse"/>
+      <xs:element name="desabilitarProduto" type="tns:desabilitarProduto"/>
+      <xs:element name="desabilitarProdutoResponse" type="tns:desabilitarProdutoResponse"/>
+      <xs:element name="listarJogos" type="tns:listarJogos"/>
+      <xs:element name="listarJogosResponse" type="tns:listarJogosResponse"/>
+      <xs:complexType name="desabilitarProduto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="desabilitarProdutoResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="listarJogos">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="listarJogosResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:outGameDTO"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="outGameDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="classificacao" type="xs:string"/>
+          <xs:element minOccurs="0" name="fabricante" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:int"/>
+          <xs:element minOccurs="0" name="midia" type="xs:string"/>
+          <xs:element minOccurs="0" name="nome" type="xs:string"/>
+          <xs:element minOccurs="0" name="plataforma" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="buscarJogo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:inGameDTO"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="inGameDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="id" type="xs:int"/>
+          <xs:element minOccurs="0" name="nome" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="buscarJogoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:outGameDTO"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="desabilitarProduto">
+    <wsdl:part element="tns:desabilitarProduto" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="desabilitarProdutoResponse">
+    <wsdl:part element="tns:desabilitarProdutoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buscarJogo">
+    <wsdl:part element="tns:buscarJogo" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarJogosResponse">
+    <wsdl:part element="tns:listarJogosResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buscarJogoResponse">
+    <wsdl:part element="tns:buscarJogoResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listarJogos">
+    <wsdl:part element="tns:listarJogos" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="WebStoreServiceSoap">
+    <wsdl:operation name="desabilitarProduto">
+      <wsdl:input message="tns:desabilitarProduto" name="desabilitarProduto"></wsdl:input>
+      <wsdl:output message="tns:desabilitarProdutoResponse" name="desabilitarProdutoResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarJogos">
+      <wsdl:input message="tns:listarJogos" name="listarJogos"></wsdl:input>
+      <wsdl:output message="tns:listarJogosResponse" name="listarJogosResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarJogo">
+      <wsdl:input message="tns:buscarJogo" name="buscarJogo"></wsdl:input>
+      <wsdl:output message="tns:buscarJogoResponse" name="buscarJogoResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebStoreServiceSoapServiceSoapBinding" type="tns:WebStoreServiceSoap">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="desabilitarProduto">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="desabilitarProduto">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="desabilitarProdutoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarJogos">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listarJogos">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listarJogosResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buscarJogo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="buscarJogo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="buscarJogoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebStoreServiceSoapService">
+    <wsdl:port binding="tns:WebStoreServiceSoapServiceSoapBinding" name="WebStoreServiceSoapPort">
+      <soap:address location="http://localhost:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint></con:endpoints><con:operation id="5e295b7e-47da-43ee-9d35-6a880d6289d7" isOneWay="false" action="" name="buscarJogo" bindingOperationName="buscarJogo" type="Request-Response" outputName="buscarJogoResponse" inputName="buscarJogo" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1171e644-9b3c-4533-8be0-4ff62fd30456" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.store.web.com.br/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:buscarJogo>\r
+         <!--Optional:-->\r
+         <arg0>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <nome>?</nome>\r
+         </arg0>\r
+      </web:buscarJogo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.store.web.com.br/WebStoreServiceSoap/buscarJogo"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="6a2687e2-b7e4-486b-909a-636e031d2a6e" isOneWay="false" action="" name="desabilitarProduto" bindingOperationName="desabilitarProduto" type="Request-Response" outputName="desabilitarProdutoResponse" inputName="desabilitarProduto" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ee253576-57cd-45ca-be49-a2ca749a134f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.store.web.com.br/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:desabilitarProduto>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+      </web:desabilitarProduto>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.store.web.com.br/WebStoreServiceSoap/desabilitarProduto"/></con:call></con:operation><con:operation id="5917b734-e3bc-48c7-8a7e-95855a4cf153" isOneWay="false" action="" name="listarJogos" bindingOperationName="listarJogos" type="Request-Response" outputName="listarJogosResponse" inputName="listarJogos" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ff28a891-f361-4fa5-a784-55e5ef30a620" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.store.web.com.br/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:listarJogos/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.store.web.com.br/WebStoreServiceSoap/listarJogos"/></con:call></con:operation></con:interface><con:testSuite id="a1d469a8-4e54-4743-b404-14c3036b7a15" name="WebStoreServiceSoapServiceSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="cb5cdedb-ec64-4867-be6d-4ed0b93f4084" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="buscarJogo TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="aae1eafc-ec73-4013-85ab-6936c401772f" name="buscarJogo"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebStoreServiceSoapServiceSoapBinding</con:interface><con:operation>buscarJogo</con:operation><con:request name="buscarJogo" id="bdb65ca0-4e99-4d71-b391-1c5129deebcf"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.store.web.com.br/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:buscarJogo>\r
+         <!--Optional:-->\r
+         <arg0>\r
+            <!--Optional:-->\r
+            <id>1000</id>\r
+            <!--Optional:-->\r
+            <nome></nome>\r
+         </arg0>\r
+      </web:buscarJogo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://webservice.store.web.com.br/WebStoreServiceSoap/buscarJogo" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="SOAP Request" id="376dd997-5d6b-4e6f-abdd-7dcfab9ccc9b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebStoreServiceSoapServiceSoapBinding</con:interface><con:operation>buscarJogo</con:operation><con:request name="SOAP Request" id="d4cb568b-b753-4ea2-bfa4-56d55d992b0b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.store.web.com.br/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:buscarJogo>\r
+         <!--Optional:-->\r
+         <arg0>\r
+            <!--Optional:-->\r
+            <id>1000</id>\r
+            <!--Optional:-->\r
+            <nome></nome>\r
+         </arg0>\r
+      </web:buscarJogo>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="db579d96-2c89-4983-8d7f-1a922009cb39"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="43f65d18-0948-49cb-85fd-d16bb28bc4a9" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>10</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>20</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>1000</testDelay><randomFactor>0.5</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/><con:securityTest id="ebe8ac99-5b0a-4b9f-a2eb-7cfd9fd502fa" name="SecurityTest 1" failOnError="true"><con:settings/><con:testStepSecurityTest><con:testStepId>aae1eafc-ec73-4013-85ab-6936c401772f</con:testStepId><con:testStepSecurityScan type="MalformedXmlSecurityScan" name="Malformed XML" id="12deecd3-b461-41cc-b356-f2fa858a5a3c" applyForFailedStep="false" disabled="false" runOnlyOnce="true"><con:settings/><con:config xsi:type="con:MalformedXml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:insertNewElement>true</con:insertNewElement><con:newElementValue>&lt;xml>xml &lt;joke> &lt;/xml> &lt;/joke></con:newElementValue><con:leaveTagOpen>true</con:leaveTagOpen><con:changeTagName>true</con:changeTagName><con:attributeMutation><con:leaveAttributeOpen>true</con:leaveAttributeOpen><con:insertInvalidChars>true</con:insertInvalidChars><con:mutateAttributes>true</con:mutateAttributes><con:newAttributeName>newAttribute</con:newAttributeName><con:newAttributeValue>XXX</con:newAttributeValue><con:addNewAttribute>true</con:addNewAttribute></con:attributeMutation><con:insertInvalidCharacter>true</con:insertInvalidCharacter></con:config><con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:strategy>ONE_BY_ONE</con:strategy><con:delay>100</con:delay></con:executionStrategy></con:testStepSecurityScan><con:testStepSecurityScan type="SQLInjectionScan" name="SQL Injection" id="0562946a-53e1-4154-b34f-dda423c4ac37" applyForFailedStep="false" disabled="false" runOnlyOnce="true"><con:settings/><con:config xsi:type="con:SQLInjectionScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:sqlInjectionStrings>' or '1'='1</con:sqlInjectionStrings><con:sqlInjectionStrings>'--</con:sqlInjectionStrings><con:sqlInjectionStrings>1'</con:sqlInjectionStrings><con:sqlInjectionStrings>admin'--</con:sqlInjectionStrings><con:sqlInjectionStrings>/*!10000%201/0%20*/</con:sqlInjectionStrings><con:sqlInjectionStrings>/*!10000 1/0 */</con:sqlInjectionStrings><con:sqlInjectionStrings>1/0</con:sqlInjectionStrings><con:sqlInjectionStrings>'%20o/**/r%201/0%20--</con:sqlInjectionStrings><con:sqlInjectionStrings>' o/**/r 1/0 --</con:sqlInjectionStrings><con:sqlInjectionStrings>;</con:sqlInjectionStrings><con:sqlInjectionStrings>'%20and%201=2%20--</con:sqlInjectionStrings><con:sqlInjectionStrings>' and 1=2 --</con:sqlInjectionStrings><con:sqlInjectionStrings>test�%20UNION%20select%201,%20@@version,%201,%201;�</con:sqlInjectionStrings><con:sqlInjectionStrings>test� UNION select 1, @@version, 1, 1;�</con:sqlInjectionStrings></con:config><con:assertion type="GroovyScriptAssertion" id="650fa944-c838-4e15-9924-5f847fb0e566" name="Script Assertion"><con:configuration><scriptText>dump()</scriptText></con:configuration></con:assertion><con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:parameters label="id" parameterName="Request" xpath="2000" checked="true"/></con:checkedParameters><con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:strategy>ONE_BY_ONE</con:strategy><con:delay>100</con:delay></con:executionStrategy></con:testStepSecurityScan></con:testStepSecurityTest><con:testStepSecurityTest><con:testStepId>376dd997-5d6b-4e6f-abdd-7dcfab9ccc9b</con:testStepId><con:testStepSecurityScan type="CrossSiteScriptingScan" name="Cross Site Scripting" id="1421f0e7-4933-4d51-aa6d-75b89dc0c7e8" applyForFailedStep="false" disabled="false" runOnlyOnce="true"><con:settings/><con:config xsi:type="con:CrossSiteScriptingScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:parameterExposureStrings>&lt;PLAINTEXT></con:parameterExposureStrings><con:parameterExposureStrings>';alert(String.fromCharCode(88,83,83))//\';alert(String.fromCharCode(88,83,83))//";alert(String.fromCharCode(88,83,83))//\";alert(String.fromCharCode(88,83,83))//-->&lt;/SCRIPT>">'>&lt;SCRIPT>alert(String.fromCharCode(88,83,83))&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>'';!--"&lt;XSS>=&amp;{()}</con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT SRC=http://soapui.org/xss.js>&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=javascript:alert('XSS')></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=JaVaScRiPt:alert('XSS')></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=javascript:alert(&amp;quot;XSS&amp;quot;)></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=`javascript:alert("RSnake says, 'XSS'")`></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG """>&lt;SCRIPT>alert("XSS")&lt;/SCRIPT>"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=javascript:alert(String.fromCharCode(88,83,83))></con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<IMG SRC=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;&#97;&#108;&#101;&#114;&#116;&#40;&#39;&#88;&#83;&#83;&#39;&#41;>]]></con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<IMG SRC=&#0000106&#0000097&#0000118&#0000097&#0000115&#0000099&#0000114&#0000105&#0000112&#0000116&#0000058&#0000097&#0000108&#0000101&#0000114&#0000116&#0000040&#0000039&#0000088&#0000083&#0000083&#0000039&#0000041>]]></con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<IMG SRC=&#x6A&#x61&#x76&#x61&#x73&#x63&#x72&#x69&#x70&#x74&#x3A&#x61&#x6C&#x65&#x72&#x74&#x28&#x27&#x58&#x53&#x53&#x27&#x29>]]></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="jav	ascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x09;ascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x0A;ascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="jav&amp;#x0D;ascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>perl -e 'print "&lt;IMG SRC=java\0script:alert(\"XSS\")>";' > out</con:parameterExposureStrings><con:parameterExposureStrings>perl -e 'print "&lt;SCR\0IPT>alert(\"XSS\")&lt;/SCR\0IPT>";' > out</con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC=" &amp;#14;  javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT/XSS SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BODY onload!#$%&amp;()*~+-_.,:;?@[/|\]^`=alert("XSS")></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT/SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;&lt;SCRIPT>alert("XSS");//&lt;&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT SRC=http://soapui.org/xss.js?&lt;B></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT SRC=//ha.ckers.org/.j></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="javascript:alert('XSS')"</con:parameterExposureStrings><con:parameterExposureStrings>&lt;iframe src=http://soapui.org/scriptlet.html &lt;</con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT>a=/XSS/alert(a.source)&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>\";alert('XSS');//</con:parameterExposureStrings><con:parameterExposureStrings>&lt;/TITLE>&lt;SCRIPT>alert("XSS");&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;INPUT TYPE="IMAGE" SRC="javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BODY BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BODY ONLOAD=alert('XSS')></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG DYNSRC="javascript:alert('XSS')"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG LOWSRC="javascript:alert('XSS')"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BGSOUND SRC="javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BR SIZE="&amp;{alert('XSS')}"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;LAYER SRC="http://soapui.org/scriptlet.html">&lt;/LAYER></con:parameterExposureStrings><con:parameterExposureStrings>&lt;LINK REL="stylesheet" HREF="javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;LINK REL="stylesheet" HREF="http://soapui.org/xss.css"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE>@import'http://soapui.org/xss.css';&lt;/STYLE></con:parameterExposureStrings><con:parameterExposureStrings>&lt;META HTTP-EQUIV="Link" Content="&lt;http://soapui.org/xss.css>; REL=stylesheet"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE>BODY{-moz-binding:url("http://soapui.org/xssmoz.xml#xss")}&lt;/STYLE></con:parameterExposureStrings><con:parameterExposureStrings>&lt;XSS STYLE="behavior: url(xss.htc);"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE>li {list-style-image: url("javascript:alert('XSS')");}&lt;/STYLE>&lt;UL>&lt;LI>XSS</con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC='vbscript:msgbox("XSS")'></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="mocha:[code]"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="livescript:[code]"></con:parameterExposureStrings><con:parameterExposureStrings>ï¿½scriptï¿½alert(ï¿½XSSï¿½)ï¿½/scriptï¿½</con:parameterExposureStrings><con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0;url=javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgnWFNTJyk8L3NjcmlwdD4K"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;META HTTP-EQUIV="refresh" CONTENT="0; URL=http://;URL=javascript:alert('XSS');"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IFRAME SRC="javascript:alert('XSS');">&lt;/IFRAME></con:parameterExposureStrings><con:parameterExposureStrings>&lt;FRAMESET>&lt;FRAME SRC="javascript:alert('XSS');">&lt;/FRAMESET></con:parameterExposureStrings><con:parameterExposureStrings>&lt;TABLE BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;TABLE>&lt;TD BACKGROUND="javascript:alert('XSS')"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;DIV STYLE="background-image: url(javascript:alert('XSS'))"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;DIV STYLE="background-image:\0075\0072\006C\0028'\006a\0061\0076\0061\0073\0063\0072\0069\0070\0074\003a\0061\006c\0065\0072\0074\0028.1027\0058.1053\0053\0027\0029'\0029"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;DIV STYLE="background-image: url(&amp;#1;javascript:alert('XSS'))"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;DIV STYLE="width: expression(alert('XSS'));"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE>@im\port'\ja\vasc\ript:alert("XSS")';&lt;/STYLE></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG STYLE="xss:expr/*XSS*/ession(alert('XSS'))"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;XSS STYLE="xss:expression(alert('XSS'))"></con:parameterExposureStrings><con:parameterExposureStrings>exp/*&lt;A STYLE='no\xss:noxss("*//*");xss:&amp;#101;x&amp;#x2F;*XSS*//*/*/pression(alert("XSS"))'></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE TYPE="text/javascript">alert('XSS');&lt;/STYLE></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE>.XSS{background-image:url("javascript:alert('XSS')");}&lt;/STYLE>&lt;A CLASS=XSS>&lt;/A></con:parameterExposureStrings><con:parameterExposureStrings>&lt;STYLE type="text/css">BODY{background:url("javascript:alert('XSS')")}&lt;/STYLE></con:parameterExposureStrings><con:parameterExposureStrings>&lt;!--[if gte IE 4]>&lt;SCRIPT>alert('XSS');&lt;/SCRIPT>&lt;![endif]--></con:parameterExposureStrings><con:parameterExposureStrings>&lt;BASE HREF="javascript:alert('XSS');//"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;OBJECT TYPE="text/x-scriptlet" DATA="http://soapui.org/scriptlet.html">&lt;/OBJECT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;OBJECT classid=clsid:ae24fdae-03c6-11d1-8b76-0080c744f389>&lt;param name=url value=javascript:alert('XSS')>&lt;/OBJECT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;EMBED SRC="http://soapui.org/xss.swf" AllowScriptAccess="always">&lt;/EMBED></con:parameterExposureStrings><con:parameterExposureStrings>&lt;EMBED SRC="data:image/svg+xml;base64,PHN2ZyB4bWxuczpzdmc9Imh0dH A6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcv MjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hs aW5rIiB2ZXJzaW9uPSIxLjAiIHg9IjAiIHk9IjAiIHdpZHRoPSIxOTQiIGhlaWdodD0iMjAw IiBpZD0ieHNzIj48c2NyaXB0IHR5cGU9InRleHQvZWNtYXNjcmlwdCI+YWxlcnQoIlh TUyIpOzwvc2NyaXB0Pjwvc3ZnPg==" type="image/svg+xml" AllowScriptAccess="always">&lt;/EMBED></con:parameterExposureStrings><con:parameterExposureStrings>a="get";b="URL(\"";c="javascript:";d="alert('XSS');\")";eval(a+b+c+d);</con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<XML ID=I><X><C><![CDATA[<IMG SRC="javas]]]]>><![CDATA[<![CDATA[cript:alert('XSS');">]]]]>><![CDATA[</C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>]]></con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<XML ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:alert('XSS')"&gt;</B></I></XML><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN>]]></con:parameterExposureStrings><con:parameterExposureStrings><![CDATA[<HTML><BODY><?xml:namespace prefix="t" ns="urn:schemas-microsoft-com:time"><?import namespace="t" implementation="#default#time2"><t:set attributeName="innerHTML" to="XSS&lt;SCRIPT DEFER&gt;alert(&quot;XSS&quot;)&lt;/SCRIPT&gt;"></BODY></HTML>]]></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT SRC="http://soapui.org/xss.jpg">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;? echo('&lt;SCR)';echo('IPT>alert("XSS")&lt;/SCRIPT>'); ?></con:parameterExposureStrings><con:parameterExposureStrings>&lt;IMG SRC="http://soapui.org/somecommand.php?somevariables=maliciouscode"></con:parameterExposureStrings><con:parameterExposureStrings>Redirect 302 /a.jpg http://soapui.org/admin.asp&amp;deleteuser</con:parameterExposureStrings><con:parameterExposureStrings>&lt;META HTTP-EQUIV="Set-Cookie" Content="USERID=&amp;lt;SCRIPT&amp;gt;alert('XSS')&amp;lt;/SCRIPT&amp;gt;"></con:parameterExposureStrings><con:parameterExposureStrings>&lt;HEAD>&lt;META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=UTF-7"> &lt;/HEAD>+ADw-SCRIPT+AD4-alert('XSS');+ADw-/SCRIPT+AD4-</con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT a=">" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT =">" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT a=">" '' SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT "a='>'" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT a=`>` SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT a=">'>" SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings><con:parameterExposureStrings>&lt;SCRIPT>document.write("&lt;SCRI");&lt;/SCRIPT>PT SRC="http://soapui.org/xss.js">&lt;/SCRIPT></con:parameterExposureStrings></con:config><con:assertion type="CrosSiteScript" id="fb67ec15-c483-4cb3-9d78-88f7e6d7700f" name="Cross Site Scripting Detection"><con:configuration/></con:assertion><con:assertion type="Invalid HTTP Status Codes" id="22d909d6-6a67-48d5-929a-d6708772a77a" name="Invalid HTTP Status Codes"><con:configuration><codes>500</codes></con:configuration></con:assertion><con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:parameters label="id" parameterName="Request" xpath="2000" checked="true"/></con:checkedParameters><con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:strategy>ONE_BY_ONE</con:strategy><con:delay>100</con:delay></con:executionStrategy></con:testStepSecurityScan><con:testStepSecurityScan type="MaliciousAttachmentSecurityScan" name="Malicious Attachment" id="03b39580-8c0f-4e63-b095-2692a45b0c71" applyForFailedStep="false" disabled="false" runOnlyOnce="true"><con:settings/><con:config xsi:type="con:MaliciousAttachmentSecurityScan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:testStep xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:checkedParameters xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:executionStrategy xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:strategy>ONE_BY_ONE</con:strategy><con:delay>100</con:delay></con:executionStrategy></con:testStepSecurityScan></con:testStepSecurityTest><con:properties/></con:securityTest></con:testCase><con:testCase id="4c1a76ab-3baf-4883-bfb2-46fa66b08eb8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="desabilitarProduto TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="27bde000-bd20-495a-a4d3-236a8565951e" name="desabilitarProduto"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebStoreServiceSoapServiceSoapBinding</con:interface><con:operation>desabilitarProduto</con:operation><con:request name="desabilitarProduto" id="73c52ec2-d072-46e4-ba31-b5de45d06430"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.store.web.com.br/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:desabilitarProduto>\r
+         <!--Optional:-->\r
+         <arg0>?</arg0>\r
+      </web:desabilitarProduto>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://webservice.store.web.com.br/WebStoreServiceSoap/desabilitarProduto"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="38c09865-cefe-468e-947e-28f2073424b9" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="listarJogos TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="41de49a1-c530-49de-956e-b4808119e1e3" name="listarJogos"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>WebStoreServiceSoapServiceSoapBinding</con:interface><con:operation>listarJogos</con:operation><con:request name="listarJogos" id="f1d78725-63ec-4988-8139-3bbf4241e5be"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/app-service-store-ws-cxf/service/WebStoreServiceSoap</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.store.web.com.br/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:listarJogos/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://webservice.store.web.com.br/WebStoreServiceSoap/listarJogos"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
