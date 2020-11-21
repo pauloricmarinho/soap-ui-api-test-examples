@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="4e25c399-fdf0-429d-bde9-85221b96befb" activeEnvironment="Default" name="api-linkedIn-learning-03-timezone-api" resourceRoot="" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="e2e4d00a-479f-409e-bbcd-be143de67ea3" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://worldtimeapi.org" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://worldtimeapi.org</con:endpoint></con:endpoints><con:resource name="Location" path="/api/timezone/{area}/{location}" id="3d8034c1-bfbe-4009-82bc-c09adb4b1e66"><con:settings/><con:parameters><con:parameter><con:name>area</con:name><con:value>area</con:value><con:style>TEMPLATE</con:style><con:default>area</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>location</con:name><con:value>location</con:value><con:style>TEMPLATE</con:style><con:default>location</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="timezones" id="43213f24-402e-45d9-ad21-e2c0b9780aed" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:loc="http://worldtimeapi.org/api/timezone/area/location">loc:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>503</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="68aed52a-3c26-491d-bd7e-50a5b68e585a" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://worldtimeapi.org</con:endpoint><con:request/><con:originalUri>http://worldtimeapi.org/api/timezone/area/location</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:attachment><con:name>worldtimeInput.csv</con:name><con:contentType>application/octet-stream</con:contentType><con:size>66</con:size><con:contentId>worldtimeInput.csv</con:contentId><con:url>C:/Users/paulo/Documents/worldtimeInput.csv</con:url><con:data>UEsDBBQACAgIALBhdFEAAAAAAAAAAAAAAAASAAAAd29ybGR0aW1lSW5wdXQuY3N2c0wrykxO1HFMykzJSszT4eVyzE0Fi7ik5pWlFoEEijOBvMTcxOLk0mIQv7S4pCgxBygYXJmSl1oJAFBLBwjUBCZ/OgAAAEIAAABQSwECFAAUAAgICACwYXRR1AQmfzoAAABCAAAAEgAAAAAAAAAAAAAAAAAAAAAAd29ybGR0aW1lSW5wdXQuY3N2UEsFBgAAAAABAAEAQAAAAHoAAAAAAA==</con:data><con:id>2d7867cc-00f9-47c9-a5bd-0068e2bbc792</con:id></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+<con:soapui-project id="4e25c399-fdf0-429d-bde9-85221b96befb" activeEnvironment="Default" name="api-linkedIn-learning-03-timezone-api" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="e2e4d00a-479f-409e-bbcd-be143de67ea3" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://worldtimeapi.org" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://worldtimeapi.org</con:endpoint></con:endpoints><con:resource name="Location" path="/api/timezone/{area}/{location}" id="3d8034c1-bfbe-4009-82bc-c09adb4b1e66"><con:settings/><con:parameters><con:parameter><con:name>area</con:name><con:value>area</con:value><con:style>TEMPLATE</con:style><con:default>area</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>location</con:name><con:value>location</con:value><con:style>TEMPLATE</con:style><con:default>location</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="timezones" id="43213f24-402e-45d9-ad21-e2c0b9780aed" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:loc="http://worldtimeapi.org/api/timezone/area/location">loc:Fault</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>503</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="68aed52a-3c26-491d-bd7e-50a5b68e585a" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://worldtimeapi.org</con:endpoint><con:request/><con:originalUri>http://worldtimeapi.org/api/timezone/area/location</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:attachment><con:name>worldtimeInput.csv</con:name><con:contentType>application/octet-stream</con:contentType><con:size>66</con:size><con:contentId>worldtimeInput.csv</con:contentId><con:data>UEsDBBQACAgIALBhdFEAAAAAAAAAAAAAAAASAAAAd29ybGR0aW1lSW5wdXQuY3N2c0wrykxO1HFMykzJSszT4eVyzE0Fi7ik5pWlFoEEijOBvMTcxOLk0mIQv7S4pCgxBygYXJmSl1oJAFBLBwjUBCZ/OgAAAEIAAABQSwECFAAUAAgICACwYXRR1AQmfzoAAABCAAAAEgAAAAAAAAAAAAAAAAAAAAAAd29ybGR0aW1lSW5wdXQuY3N2UEsFBgAAAAABAAEAQAAAAHoAAAAAAA==</con:data><con:id>2d7867cc-00f9-47c9-a5bd-0068e2bbc792</con:id></con:attachment><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
   <con:entry key="area" value="area"/>
   <con:entry key="location" value="location"/>
-</con:parameters><con:parameterOrder><con:entry>area</con:entry><con:entry>location</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="2121919b-aab8-48a1-90a9-d0a646a22063" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="307190c5-e0fb-4931-a697-1fc1a3ad05b1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="45f64cb8-8a54-4298-8138-154f4c072908"><con:settings/><con:config><script>def inputFilePath = testRunner.testCase.testSuite.getPropertyValue("inputFile")
+</con:parameters><con:parameterOrder><con:entry>area</con:entry><con:entry>location</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="2121919b-aab8-48a1-90a9-d0a646a22063" name="Data Driven Test Suite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="307190c5-e0fb-4931-a697-1fc1a3ad05b1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="45f64cb8-8a54-4298-8138-154f4c072908"><con:settings/><con:config><script>def inputFilePath = testRunner.testCase.testSuite.getPropertyValue("inputFile")
 
 File file = new File(inputFilePath.toString()).eachLine{
 	testRunner.testCase.testSuite.setPropertyValue("inArea", it.split(",")[0])
@@ -15,4 +15,75 @@ File file = new File(inputFilePath.toString()).eachLine{
 	log.info("${runner.status}")
 
 	sleep 500
-}</script></con:config></con:testStep><con:properties><con:property><con:name>inputFile</con:name><con:value/></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+}</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="e38529e7-f145-4ccf-b38d-2d2732a04b46" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 2" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="0ef0b8c4-2b0d-47dd-b1a7-48e07c6b77c1"><con:settings/><con:config><script>context.mylines.each{
+	testRunner.testCase.testSuite.setPropertyValue( "inArea", it.split(",")[0] )
+	testRunner.testCase.testSuite.setPropertyValue( "inLocation", it.split(",")[1] )
+
+	def tc = testRunner.testCase.testSuite.testCases["TestCase 1"]
+	def runner = tc.run(null, false)
+	log.info ("${runner.status}")
+	sleep 500
+}</script></con:config></con:testStep><con:setupScript>def inputFilePath = testRunner.testCase.testSuite.getPropertyValue( "inputFile" )
+
+def myFile = new File (inputFilePath)
+
+def lines = myFile.readLines()
+
+context.mylines = lines
+
+assert lines.size() == 4</con:setupScript><con:properties/></con:testCase><con:testCase id="20105c9a-0ee9-4a0c-8182-8458c2e3a14d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 3" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="REST Request" id="894f47bc-9bb7-40b9-8bc3-c78d95a7bd42"><con:settings/><con:config service="http://worldtimeapi.org" methodName="timezones" resourcePath="/api/timezone/{area}/{location}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="REST Request" id="19b67e07-3ddc-4cf6-8a96-f3c3139b166f" mediaType="application/octet-stream"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://worldtimeapi.org</con:endpoint><con:request/><con:originalUri>http://worldtimeapi.org/api/timezone/Africa/Abidjan</con:originalUri><con:assertion type="Simple Contains" id="2ec89ce0-0d59-4d19-9456-d72880d4c54a" name="Contains"><con:configuration><token>Africa</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Invalid HTTP Status Codes" id="e8ed18f9-118e-4b0e-9cce-05724bdd2729" name="Invalid HTTP Status Codes"><con:configuration><codes>203</codes></con:configuration></con:assertion><con:assertion type="JsonPath Count" id="77c42eaf-6f76-4b12-9c2a-fd04483769f1" name="JsonPath Count"><con:configuration><path>client_ip</path><content>1</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Existence Match" id="4ea59da1-f802-497a-89c3-a5cafb36af67" name="JsonPath Existence Match"><con:configuration><path>$.dst</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="d404123b-c0e9-439d-bbf8-0f631e96067c" name="Valid HTTP Status Codes"><con:configuration><codes>200,201</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="caea68f3-50c6-4bf0-bba6-f370c2eb346e" name="Response SLA"><con:configuration><SLA>300</SLA></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="0a1c138e-e4d2-44f3-a658-6a1ea5fa5d47" name="Script Assertion"><con:configuration><scriptText>def response_message = messageExchange.responseContent
+
+def response_json = new groovy.json.JsonSlurper().parseText(response_message)
+
+log.info(response_json.day_of_year)
+
+def response_day = response_json.day_of_year
+
+if(1 &lt;= response_day &amp; response_day &lt;= 366){
+    assert true
+}
+else{
+    log.info("wrong day of year: ${response_day}")
+    assert false
+}</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="area" value="${#TestSuite#inArea}"/>
+  <con:entry key="location" value="${#TestSuite#inLocation}"/>
+</con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>inputFile</con:name><con:value>D:\Desenvolvimento\Estudos\linkedin-learning\soap-ui-api-test-examples\worldtimeInput.csv</con:value></con:property><con:property><con:name>inArea</con:name><con:value>Africa</con:value></con:property><con:property><con:name>inLocation</con:name><con:value>Abidjan</con:value></con:property></con:properties></con:testSuite><con:testSuite id="77661153-a29d-433e-bc45-6702bef8fd43" name="TestSuite Global Variables"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="5f917301-9c18-4ba6-9fa5-53df18a06a40" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="93e2a57c-0c44-4cae-a2ca-2d11c22b28bf"><con:settings/><con:config><script>// def inputFilePath = testRunner.testCase.testSuite.getPropertyValue( "inputFile" )
+
+
+// Usando Variável Global do SOAP-UI
+def inputFilePath = context.expand('${#Global#inputFileGlobal}')
+
+// Usando variável Global do Sistema Operacional
+// def inputFilePath = context.expand('${#Env#HOMEPATH}')
+
+log.info("C:${inputFilePath}\\SoapUi\\worldtimeInput.csv")
+
+//def tc = testRunner.testCase.testSuite.project.testSuites["Data Driven Test Suite"].testCases["TestCase 1"]
+
+//Consultar Tutoriais de Groovy
+
+void setProperties(String currentLine){
+
+	testRunner.testCase.testSuite.setPropertyValue( "inArea", currentLine.split(",")[0] )
+	testRunner.testCase.testSuite.setPropertyValue( "inLocation", currentLine.split(",")[1] )
+	log.info(currentLine.split(",")[1])
+}
+
+File file = new File (inputFilePath.toString()).eachLine{
+
+	try{
+		
+		
+		setProperties(it);
+		def tc = testRunner.testCase.testSuite.testCases["TestCase 1"]
+		def runner = tc.run(null, false)
+		log.info ("${runner.status}")
+
+		1/0 // Somente para Testar a Expection
+		sleep 500
+		
+	}catch(Exception){
+		log.info ("A Execução do Script gerou uma Exception.")
+	}
+}</script></con:config></con:testStep><con:properties/></con:testCase><con:properties><con:property><con:name>inArea</con:name><con:value>Africa</con:value></con:property><con:property><con:name>inLocation</con:name><con:value>Abidjan</con:value></con:property></con:properties></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
